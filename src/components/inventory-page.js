@@ -1,58 +1,51 @@
 import React from 'react';
 import {connect} from 'react-redux';
-//import {Link, Redirect} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import BookBlockList from './book-block-list';
 import BookLineList from './book-line-list';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import HeaderBar from './header-bar';
 import '../styles/inventory-page.css';
-import { changeDisplayToBlock, changeDisplayToLine } from '../actions/inventory';
+import MediaQuery from 'react-responsive';
+import { changeSortCategory } from '../actions/inventory';
 
 export class InventoryPage extends React.Component {
 
-    displayBlock() {
-        this.props.dispatch(changeDisplayToBlock());
-    }
+    sortByCategory(category, bookList) {
 
-    displayLine() {
-        this.props.dispatch(changeDisplayToLine());
     }
 
     render() {
-        const bookList = [
-            {
-                title: "Harry Potter 1",
-                author: "JK Rowling",
-                price: 10
-            },
-            {
-                title: "Crime and Punishment",
-                author: "Dostoevsky",
-                price: 11
-            },
-            {
-                title: "12 Rules for Life",
-                author: "Jordan Peterson",
-                price: 12
-            }
-        ];
 
-        let list; 
-        console.log('display mode: ',this.props.displayMode);
-        if(this.props.displayMode === "block") {
-            list = <BookBlockList bookList={bookList} />;
+        let bookList;
+        let sort = this.props.sortBy;
+        if(sort) {
+            bookList = this.props.books.concat().sort(function(a,b){
+                if(a[sort] < b[sort]) return -1;
+                else if(a[sort] > b[sort]) return 1;
+                else return 0;
+              });
         }
         else {
-            list = <BookLineList bookList={bookList} />;
+            bookList = this.props.bookList;
         }
 
         return (
             <div className='InventoryPage'>
-                <div className="tempHeaderBar">
-                    <button onClick={() => this.displayBlock()}><FontAwesomeIcon className="displayModeButton" icon="pause" /></button>
-                    <button onClick={() => this.displayLine()}><FontAwesomeIcon className="displayModeButton" icon="list" /></button>
+                <HeaderBar page="inventory" />
+                <div className="sort-buttons">
+                    <button type="button" onClick={() => this.props.dispatch(changeSortCategory("title"))}>title</button>
+                    <button type="button" onClick={() => this.props.dispatch(changeSortCategory("author"))}>author</button>
+                    <button type="button" onClick={() => this.props.dispatch(changeSortCategory("stock"))}>stock</button>
+                    <button type="button" onClick={() => this.props.dispatch(changeSortCategory("price"))}>price</button>
                 </div>
-                <section className="stock">
-                    {list}
+
+                <section className="inventory">
+                    <MediaQuery minWidth={550}>
+                        <BookLineList bookList={bookList} />
+                    </MediaQuery>
+                    <MediaQuery maxWidth={549}>
+                        <BookBlockList bookList={bookList} />
+                    </MediaQuery>
                 </section>
             </div>
         );
@@ -60,7 +53,9 @@ export class InventoryPage extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-    displayMode: state.inventory.displayMode
+    displayMode: state.inventory.displayMode,
+    sortBy: state.inventory.sortBy,
+    books: state.inventory.books
 });
 
 export default connect(mapStateToProps)(InventoryPage);

@@ -1,0 +1,9 @@
+.stock-price {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.stock-price input {
+    margin-right: 10px;
+    width: 50px;
+}

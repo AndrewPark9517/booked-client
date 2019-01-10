@@ -1,0 +1,7 @@
+.InventoryFormWeb {
+    display: flex;
+}
+
+.category .form-input {
+    width: 60px;
+}

@@ -3,19 +3,16 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import '../styles/book-block-list.css';
+import BookBlock from './book-block';
 
-export function BookList(props) {
+export function BookBlockList(props) {
     const books = props.bookList.map(book => {
-        return (
-            <li key={book.title}>
-                <p>{book.title}</p>
-                <div className="book-image"></div>
-                <p>{book.author}</p>
-            </li>
+        return (            
+             <BookBlock key={book.title} book={book} />            
         );
     })
     return (
-        <ul>
+        <ul className="book-block-list">
             {books}
         </ul>
     );
@@ -25,4 +22,4 @@ const mapStateToProps = (state, props) => ({
     bookList: props.bookList
 });
 
-export default connect(mapStateToProps)(BookList);
+export default connect(mapStateToProps)(BookBlockList);

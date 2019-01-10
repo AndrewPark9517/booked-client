@@ -1,0 +1,32 @@
+.bookBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 15px 0px;
+    padding: 0px 10px;
+}
+
+.bookBlock .price {
+    display: inline-block;
+    margin-left: 47px;
+}
+
+.bookBlock input {
+    text-align: center;
+}
+
+.delete {
+    margin-left: 15px;
+}
+
+.title-author {
+    margin-bottom: 3px;
+}
+
+.block-title {
+    font-weight: 600;
+}
+
+.block-author {
+    font-style: italic;
+}

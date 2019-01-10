@@ -1,0 +1,33 @@
+.HeaderBar {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.links {
+    justify-content: flex-end;
+}
+
+.links * {
+    margin-left: 10px;
+}
+
+.HeaderBar .header {
+    margin-right: auto;
+}
+
+.header h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.HeaderBar a {
+    text-decoration: none;
+    color: #111;
+}
+
+.HeaderBar .links a:hover {
+    text-decoration: underline;
+}
+
