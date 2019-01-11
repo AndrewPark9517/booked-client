@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link, Redirect} from 'react-router-dom';
 import BookBlockList from './book-block-list';
 import BookLineList from './book-line-list';
 import HeaderBar from './header-bar';
+import requiresLogin from './requries-login';
 import '../styles/inventory-page.css';
 import MediaQuery from 'react-responsive';
 import { changeSortCategory } from '../actions/inventory';
@@ -58,4 +58,4 @@ const mapStateToProps = (state) => ({
     books: state.inventory.books
 });
 
-export default connect(mapStateToProps)(InventoryPage);
+export default requiresLogin()(connect(mapStateToProps)(InventoryPage));

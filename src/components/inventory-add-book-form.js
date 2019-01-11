@@ -1,5 +1,5 @@
 import React  from 'react';
-import { reduxForm, Field, focus} from 'redux-form';
+import { reduxForm, Field} from 'redux-form';
 import {addBookToInventory} from '../actions/inventory';
 import Input from './input';
 import {required, nonEmpty, isTrimmed, isWholeNumber} from '../validators';

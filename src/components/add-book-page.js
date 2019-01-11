@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import requiresLogin from './requries-login';
 import HeaderBar from './header-bar';
 import InventoryAddBookForm from './inventory-add-book-form';
 
@@ -21,4 +21,4 @@ const mapStateToProps = state => ({
     
 });
 
-export default connect(mapStateToProps)(AddBookPage);
+export default requiresLogin()(connect(mapStateToProps)(AddBookPage));

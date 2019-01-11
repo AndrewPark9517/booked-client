@@ -2,11 +2,12 @@ import React from 'react';
 import { reduxForm, Field } from 'redux-form';
 import Input from './input';
 import { required, nonEmpty} from '../validators';
+import { login } from '../actions/auth';
 
 export class LoginForm extends React.Component {
 
     onSubmit(values) {
-        console.log(values);
+        return this.props.dispatch(login(values.username, values.password));
     }
 
     render() {

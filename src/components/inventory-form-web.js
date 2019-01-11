@@ -1,5 +1,5 @@
 import React  from 'react';
-import { reduxForm, Field, focus} from 'redux-form';
+import { reduxForm, Field} from 'redux-form';
 import { connect } from 'react-redux';
 import { editBookValues, deleteBook } from '../actions/inventory';
 import Input from './input';

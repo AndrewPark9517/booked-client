@@ -1,10 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import LoginForm from './login-form';
 import RegistrationForm from './registration-form';
 
 export function LandingPage(props) {
+
+    if (props.loggedIn) {
+        return <Redirect to="/inventory" />;
+    }
 
     return (
         <div className="LandingPage">
@@ -17,7 +21,7 @@ export function LandingPage(props) {
 }
 
 const mapStateToProps = state => ({
-    displayMode: state
+    loggedIn: state.auth.currentUser !== null
 });
 
 export default connect(mapStateToProps)(LandingPage);
