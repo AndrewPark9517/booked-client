@@ -30,6 +30,6 @@
 
 @media only screen and (max-width: 305px) {
     .HeaderBar .links button {
-        margin-left: 6px;
+        margin-left: 3px;
     }
 }
