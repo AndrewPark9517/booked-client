@@ -20,9 +20,11 @@ export function LandingPage(props) {
                     <div className="login-container">
                         <h3 className="form-title">Login</h3>
                         <LoginForm />
-                        <p>Guest Access</p>
-                        <p>Username: guest</p>
-                        <p>Password: guest</p>
+                        <div className="guest-access">
+                            <p className="guest-info">Guest Access</p>
+                            <p className="guest-info">Username: guest</p>
+                            <p className="guest-info">Password: guest</p>
+                        </div>
                     </div>
                     <div className="register-container">
                         <h3 className="form-title">Register</h3>

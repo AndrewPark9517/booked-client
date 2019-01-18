@@ -7,15 +7,29 @@
     text-align: center;
 }
 
+.HeaderBar button:hover {
+    text-decoration: underline;
+}
+
 .add-book-form button {
+    padding: 4px;
+    font-size: 14px;
     background-color: #f4f4f4;
     cursor: pointer;
     border: 1px solid #f4f4f4;
     border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 4px;
 }
 
 .add-book-form button:hover {
     background-color: #373737;
     border-color: #373737;
     color: #f4f4f4;
+}
+
+@media only screen and (max-width: 305px) {
+    .HeaderBar .links button {
+        margin-left: 6px;
+    }
 }

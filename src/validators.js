@@ -15,6 +15,10 @@ export const hasTwoDecimals = value => {
     return array.length < 2 || array[1].length < 3 ? undefined : "2 decimal digits"
 }
 
+export const isPositive = value => {
+    return value >= 0 ? undefined : 'Must be positive';
+}
+
 export const length = length => value => {
     if (length.min && value.length < length.min) {
         return `Must be at least ${length.min} characters long`;

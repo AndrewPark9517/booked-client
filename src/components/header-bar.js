@@ -18,7 +18,7 @@ export class HeaderBar extends React.Component {
             link = <Link to="/addBook"><button>Add Book</button></Link>
         }
         else if(this.props.page === "addBook") {
-            link = <Link to="/inventory"><buttton>Inventory</buttton></Link>
+            link = <Link to="/inventory"><button>Inventory</button></Link>
         }
 
         let log;

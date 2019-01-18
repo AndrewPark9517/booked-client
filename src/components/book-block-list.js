@@ -2,6 +2,7 @@
 
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import '../styles/book-block-list.css';
 import BookBlock from './book-block';
 
@@ -14,6 +15,9 @@ export function BookBlockList(props) {
     return (
         <ul className="book-block-list">
             {books}
+            <li>
+                <Link className="add-book-link" to="/addBook">Add a book...</Link>
+            </li>
         </ul>
     );
 }

@@ -3,7 +3,7 @@ import { reduxForm, Field} from 'redux-form';
 import { connect } from 'react-redux';
 import { editBookInInventory, deleteBookInInventory } from '../actions/inventory';
 import Input from './input';
-import { required, nonEmpty, isTrimmed, isWholeNumber, hasTwoDecimals } from '../validators';
+import { required, nonEmpty, isTrimmed, isWholeNumber, hasTwoDecimals, isPositive } from '../validators';
 import '../styles/inventory-form-web.css';
 
 export class InventoryFormWeb extends React.Component {
@@ -21,11 +21,11 @@ export class InventoryFormWeb extends React.Component {
             <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))} className="InventoryFormWeb">
                 <div className="category edit-stock">
                     <Field component={Input} type="number" name="stock" 
-                    validate={[required, nonEmpty, isTrimmed, isWholeNumber]}/>
+                    validate={[required, nonEmpty, isTrimmed, isWholeNumber, isPositive]}/>
                 </div>
                 <div className="category edit-price">
                     <Field component={Input} type="number" name="price" 
-                    validate={[required, nonEmpty, isTrimmed, hasTwoDecimals]}/>
+                    validate={[required, nonEmpty, isTrimmed, hasTwoDecimals, isPositive]}/>
                 </div>
                 <div className="category edit-submit">
                     <button type="submit" disabled={this.props.pristine || this.props.submitting}>Submit</button>

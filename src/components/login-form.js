@@ -22,11 +22,11 @@ export class LoginForm extends React.Component {
         return (
             <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
                 {error}
-                <label htmlFor="username">Username: </label>
-                <Field component={Input} type="text" name="username" 
+                
+                <Field component={Input} type="text" name="username" placeholder="Username"
                 validate={[required, nonEmpty]}/>
-                <label htmlFor="password">Password: </label>
-                <Field component={Input} type="text" name="password" 
+                
+                <Field component={Input} type="text" name="password" placeholder="Password"
                 validate={[required, nonEmpty]}/>
                 <button type="submit" disabled={this.props.pristine || this.props.submitting}>Login</button>
             </form>

@@ -38,24 +38,35 @@
 .LandingPage input {
     border: 1px solid lightgray;
     border-radius: 4px;
-    padding: 3px;
+    padding: 7px;
     margin-bottom: 5px;
-}
-
-.form-error {
-    display: inline-block;
-    margin-left: 5px;
+    font-size: 16px;
 }
 
 .LandingPage button {
+    padding: 5px 7px;
     background-color: transparent;
-    border: none;
-    color: lightgoldenrodyellow;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid lightgoldenrodyellow;
+    background-color: lightgoldenrodyellow;
+    color: tan;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .LandingPage button:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    background-color: tan;
+    border: 1px solid tan;
+    color: lightgoldenrodyellow;
+}
+
+.guest-access {
+    margin-top: 20px;
+}
+
+.guest-info {
+    margin: 0;
 }
 
 @media only screen and (max-width: 799px) {

@@ -2,23 +2,32 @@
     color: red;
 }
 
+.InventoryPage {
+    min-height: 100vh;
+    background-color: #F5F5F5;
+}
+
 .inventory {
-    padding: 10px;
+    padding: 50px;
 }
 
 .sort-buttons {
     text-align: right;
     padding-right: 10px;
     padding-bottom: 5px;
+    background-color: #5c5c5c;
 }
 
-.InventoryPage {
-    min-height: 100vh;
-    background-color: #F5F5F5;
-}
-
-.HeaderBar, .sort-buttons {
+.HeaderBar {
     background-color: #373737;
+}
+
+.HeaderBar .links button {
+    font-size: 16px;
+}
+
+.sort-buttons button {
+    font-size: 14px;
 }
 
 .HeaderBar *, .sort-buttons * {
@@ -40,10 +49,16 @@ li.BookLine:hover {
 }
 
 .BookLine button {
-    background-color: transparent;
-    border: none;
-    color: #373737;
+    background-color: #373737;
+    border: 1px solid #373737;
+    border-radius: 5px;
+    color: #e4e4e4;
     cursor: pointer;
+}
+
+.BookLine button:hover {
+    background-color: #AB987A;
+    text-decoration: none;
 }
 
 .BookBlock button {
@@ -52,6 +67,22 @@ li.BookLine:hover {
     color: #f4f4f4;
     border-radius: 5px;
 }
-.BookLine button:hover {
+
+.add-book-link {
+    color: #373737;
+    display: inline-block;
+    font-weight:bold;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.add-book-link:hover {
     text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 549px) {
+    .inventory {
+        padding: 20px;
+    }
 }

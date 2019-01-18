@@ -2,6 +2,7 @@
 
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import '../styles/book-line-list.css';
 import BookLine from './book-line';
 
@@ -28,6 +29,7 @@ export function BookLineList(props) {
                 </div>                
             </li>
             {books}
+            <Link className="add-book-link" to="/addBook">Add a book...</Link>
         </ul>
     );
 }
