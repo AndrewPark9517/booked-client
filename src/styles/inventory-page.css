@@ -58,6 +58,7 @@ li.BookLine:hover {
 
 .BookLine button:hover {
     background-color: #AB987A;
+    border: 1px solid #AB987A;
     text-decoration: none;
 }
 
