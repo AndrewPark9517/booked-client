@@ -7,17 +7,19 @@ import requiresLogin from './requries-login';
 import '../styles/inventory-page.css';
 import MediaQuery from 'react-responsive';
 import { changeSortCategory } from '../actions/inventory';
+import { fetchInventory } from '../actions/inventory';
 
 export class InventoryPage extends React.Component {
 
-    sortByCategory(category, bookList) {
-
+    componentDidMount() {
+        this.props.dispatch(fetchInventory());
     }
 
     render() {
 
         let bookList;
         let sort = this.props.sortBy;
+        console.log('from inventory page, books: ', this.props.books);
         if(sort) {
             bookList = this.props.books.concat().sort(function(a,b){
                 if(a[sort] < b[sort]) return -1;

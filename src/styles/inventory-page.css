@@ -8,5 +8,50 @@
 
 .sort-buttons {
     text-align: right;
-    margin-right: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.InventoryPage {
+    min-height: 100vh;
+    background-color: #F5F5F5;
+}
+
+.HeaderBar, .sort-buttons {
+    background-color: #373737;
+}
+
+.HeaderBar *, .sort-buttons * {
+    color: #F5F5F5;
+}
+
+.HeaderBar button, .sort-buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.InventoryPage button:hover {
+    text-decoration: underline;
+}
+
+li.BookLine:hover {
+    background-color: #e4e4e4;
+}
+
+.BookLine button {
+    background-color: transparent;
+    border: none;
+    color: #373737;
+    cursor: pointer;
+}
+
+.BookBlock button {
+    border: 1px solid #373737;
+    background-color: #373737;
+    color: #f4f4f4;
+    border-radius: 5px;
+}
+.BookLine button:hover {
+    text-decoration: underline;
 }

@@ -1,0 +1,74 @@
+.landing-page-container {
+    padding-top: 100px;
+    min-height: 100vh;
+    background-image: url('../images/library.jpg');
+    background-size: cover;
+}
+
+.LandingPage {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 5px 0px 35px;
+    color: lightgoldenrodyellow;
+}
+
+.app-title, .app-summary {
+    text-align: center;
+}
+
+.app-title {
+    font-size: 40px;
+}
+.app-summary {
+    font-size: 16px;
+}
+
+.form-title {
+    font-size: 25px;
+}
+
+.forms-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-container, .register-container {
+    margin: 0px 100px;
+}
+
+.LandingPage input {
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    padding: 3px;
+    margin-bottom: 5px;
+}
+
+.form-error {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.LandingPage button {
+    background-color: transparent;
+    border: none;
+    color: lightgoldenrodyellow;
+}
+
+.LandingPage button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 799px) {
+    .forms-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .LandingPage {
+        padding: 20px 0px;
+    }
+
+    .form-title {
+        text-align: center;
+    }
+  }

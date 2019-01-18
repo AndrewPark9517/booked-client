@@ -15,15 +15,15 @@ export class HeaderBar extends React.Component {
     render() {
         let link;
         if(this.props.page === "inventory") {
-            link = <Link to="/addBook">Add Book</Link>
+            link = <Link to="/addBook"><button>Add Book</button></Link>
         }
         else if(this.props.page === "addBook") {
-            link = <Link to="/inventory">Inventory</Link>
+            link = <Link to="/inventory"><buttton>Inventory</buttton></Link>
         }
 
         let log;
         if(this.props.loggedIn) {
-            log = <button onClick={() => this.logOut()}>Log out</button>
+            log = <button onClick={() => this.logOut()}>Logout</button>
         }
         
         return (

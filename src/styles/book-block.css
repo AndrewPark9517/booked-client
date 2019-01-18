@@ -1,4 +1,4 @@
-.bookBlock {
+.BookBlock {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,12 +6,12 @@
     padding: 0px 10px;
 }
 
-.bookBlock .price {
+.BookBlock .price {
     display: inline-block;
     margin-left: 47px;
 }
 
-.bookBlock input {
+.BookBlock input {
     text-align: center;
 }
 

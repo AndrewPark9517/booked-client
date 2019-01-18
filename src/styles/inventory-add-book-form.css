@@ -9,7 +9,7 @@
 
 .newBookInput label[for="title"] {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 21px;
 }
 
 .newBookInput label[for="author"] {
@@ -34,6 +34,8 @@
 }
 
 .InventoryAddBookForm {
+    margin: 0px 10px;
+    background-color: #AB987A;
     padding: 20px;
     border-radius: 5px;
     border: 1px solid lightgray;

@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import requiresLogin from './requries-login';
 import HeaderBar from './header-bar';
 import InventoryAddBookForm from './inventory-add-book-form';
+import '../styles/add-book-page.css';
 
 export function AddBookPage(props) {
 

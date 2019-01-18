@@ -1,0 +1,21 @@
+.AddBookPage {
+    background-color: #F4F4F4;
+    min-height: 100vh;
+}
+
+.add-book-form h2 {
+    text-align: center;
+}
+
+.add-book-form button {
+    background-color: #f4f4f4;
+    cursor: pointer;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+}
+
+.add-book-form button:hover {
+    background-color: #373737;
+    border-color: #373737;
+    color: #f4f4f4;
+}

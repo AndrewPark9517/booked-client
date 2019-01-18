@@ -8,8 +8,9 @@ import '../styles/inventory-add-book-form.css';
 export class InventoryAddBookForm extends React.Component {
 
     onSubmit(values) {
-        this.props.dispatch(addBookToInventory(values.title, values.author, values.stock, values.price));
-        return this.props.history.push('/inventory');
+        return this.props
+            .dispatch(addBookToInventory(values.title, values.author, values.stock, values.price))
+            .then(() => this.props.history.push('/inventory'));
     }
 
     render() {

@@ -1,7 +1,7 @@
 import React  from 'react';
 import { reduxForm, Field} from 'redux-form';
 import { connect } from 'react-redux';
-import { editBookValues, deleteBook } from '../actions/inventory';
+import { editBookInInventory, deleteBookInInventory } from '../actions/inventory';
 import Input from './input';
 import { required, nonEmpty, isWholeNumber, hasTwoDecimals } from '../validators';
 import '../styles/inventory-form-mobile.css';
@@ -9,11 +9,11 @@ import '../styles/inventory-form-mobile.css';
 export class InventoryFormMobile extends React.Component {
 
     onSubmit(values) {
-        return this.props.dispatch(editBookValues(this.props.book.title, values.stock, values.price));
+        return this.props.dispatch(editBookInInventory(this.props.book.title, values.stock, values.price));
     }
 
     onDelete(title) {
-        return this.props.dispatch(deleteBook(title));
+        return this.props.dispatch(deleteBookInInventory(title));
     }
 
     render() {

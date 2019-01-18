@@ -5,7 +5,7 @@ import '../styles/book-block.css';
 
 export function BookBlock(props) {
     return (
-        <li className="bookBlock">
+        <li className="BookBlock">
             <div className="title-author">
                 <span className="block-title">{props.book.title}</span> by <span 
                 className="block-author">{props.book.author}</span>
