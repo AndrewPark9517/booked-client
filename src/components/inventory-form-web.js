@@ -44,7 +44,7 @@ export class InventoryFormWeb extends React.Component {
 InventoryFormWeb = reduxForm({
     enableReinitialize: true,
     destroyOnUnmount: false
-  })(InventoryFormWeb)
+  })(InventoryFormWeb);
   
   // You have to connect() to any reducers that you wish to connect to yourself
   InventoryFormWeb = connect(
@@ -55,8 +55,8 @@ InventoryFormWeb = reduxForm({
          "price": props.book.price.toString()
       }
     })
-  )(InventoryFormWeb)
+  )(InventoryFormWeb);
   
-  export default InventoryFormWeb
+  export default InventoryFormWeb;
 
 

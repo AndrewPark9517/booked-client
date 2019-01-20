@@ -11,6 +11,7 @@ describe('<AddBookPage />', function() {
 
     it('Add Book Form is present', function() {
         const wrapper = shallow(<AddBookPage />);
-        expect(wrapper.hasClass('add-book-form')).toEqual(true);
+        expect(wrapper.containsAllMatchingElements([
+            <h2>Add a book of your choice!</h2>])).toEqual(true);
     });
 });

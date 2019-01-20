@@ -28,14 +28,14 @@ export class InventoryFormMobile extends React.Component {
                 <button type="submit" disabled={this.props.pristine || this.props.submitting}>Submit</button>   
                 <button className = "delete" type="button" onClick={() => this.onDelete(this.props.book.title)}>Delete</button>
             </form>
-        )
+        );
     }
 }
 
 InventoryFormMobile = reduxForm({
     enableReinitialize: true,
     destroyOnUnmount: false
-})(InventoryFormMobile)
+})(InventoryFormMobile);
 
 InventoryFormMobile = connect(
     (state, props) => ({
@@ -45,6 +45,6 @@ InventoryFormMobile = connect(
          "price": props.book.price.toString()
       }
     })
-  )(InventoryFormMobile)
+  )(InventoryFormMobile);
   
-  export default InventoryFormMobile
+  export default InventoryFormMobile;

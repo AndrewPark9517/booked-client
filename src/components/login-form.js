@@ -20,7 +20,7 @@ export class LoginForm extends React.Component {
             );
         }
         return (
-            <form onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
+            <form className="LoginForm" onSubmit={this.props.handleSubmit(values => this.onSubmit(values))}>
                 {error}
                 
                 <Field component={Input} type="text" name="username" placeholder="Username"
@@ -36,4 +36,4 @@ export class LoginForm extends React.Component {
 
 export default reduxForm({
     form: "login"
-})(LoginForm)
+})(LoginForm);

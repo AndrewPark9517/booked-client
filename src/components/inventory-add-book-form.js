@@ -44,6 +44,6 @@ export class InventoryAddBookForm extends React.Component {
 
 export default reduxForm({
     form: "addBook"
-})(InventoryAddBookForm)
+})(InventoryAddBookForm);
 
 

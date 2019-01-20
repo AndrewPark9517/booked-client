@@ -71,7 +71,6 @@ export const addBookToInventory = (title, author, stock, price) => (dispatch, ge
         return res.json();
     })
     .then(json => {
-        console.log('json file in addBookToInventory: ', json);
         return dispatch(fetchInventorySuccess(json.books));
     })
     .catch(err => {

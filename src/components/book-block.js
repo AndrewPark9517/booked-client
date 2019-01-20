@@ -21,6 +21,6 @@ export function BookBlock(props) {
 
 const mapStateToProps = (state, props) => ({
     book: props.book
-})
+});
 
 export default connect(mapStateToProps)(BookBlock);

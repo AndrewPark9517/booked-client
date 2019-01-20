@@ -18,8 +18,4 @@ export function AddBookPage(props) {
     );
 }
 
-const mapStateToProps = state => ({
-    
-});
-
-export default requiresLogin()(connect(mapStateToProps)(AddBookPage));
+export default requiresLogin()(connect()(AddBookPage));

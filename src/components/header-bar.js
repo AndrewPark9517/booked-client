@@ -34,7 +34,7 @@ export class HeaderBar extends React.Component {
                     { log }
                 </div>
             </div>
-        )
+        );
     }
 }
 

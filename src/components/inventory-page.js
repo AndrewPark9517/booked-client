@@ -19,7 +19,6 @@ export class InventoryPage extends React.Component {
 
         let bookList;
         let sort = this.props.sortBy;
-        console.log('from inventory page, books: ', this.props.books);
         if(sort) {
             bookList = this.props.books.concat().sort(function(a,b){
                 if(a[sort] < b[sort]) return -1;
