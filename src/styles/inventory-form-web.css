@@ -4,4 +4,6 @@
 
 .category .form-input {
     width: 60px;
+    padding: 2px;
+    font-size: 16px;
 }
